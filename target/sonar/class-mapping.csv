@@ -1,12 +1,1 @@
-DocBuilder:39,src/main/java/DocBuilder.java:39
-DocBuilder:26,src/main/java/DocBuilder.java:26
-Hello:20,src/main/java/Hello.java:20
-Hello:80,src/main/java/Hello.java:80
-Hello:76,src/main/java/Hello.java:76
-Hello:76,src/main/java/Hello.java:76
-Hello:20,src/main/java/Hello.java:20
-Hello:75,src/main/java/Hello.java:75
-StaticCodeExample:-1,src/main/java/StaticCodeExample.java:-1
-StaticCodeExample:10,src/main/java/StaticCodeExample.java:10
-StaticCodeExample:15,src/main/java/StaticCodeExample.java:15
-StaticCodeExample:-1,src/main/java/StaticCodeExample.java:-1
+hello.Hello:13,src/main/java/hello/Hello.java:13

@@ -8,16 +8,6 @@
     <artifactId>sonar_test</artifactId>
     <version>1.0.1-SNAPSHOT</version>
 
-    <!--<reporting>-->
-        <!--<plugins>-->
-            <!--<plugin>-->
-                <!--<groupId>org.codehaus.mojo</groupId>-->
-                <!--<artifactId>findbugs-maven-plugin</artifactId>-->
-                <!--<version>3.0.6-SNAPSHOT</version>-->
-            <!--</plugin>-->
-        <!--</plugins>-->
-    <!--</reporting>-->
-
     <build>
         <plugins>
 
@@ -42,7 +32,7 @@
                 </dependencies>
             </plugin>
 
-
+l
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-site-plugin</artifactId>

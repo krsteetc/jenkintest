@@ -1,429 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<BugCollection version="4.0.0" sequence="0" timestamp="1588234506000" analysisTimestamp="1588235501244" release="">
+<BugCollection version="4.0.0" sequence="0" timestamp="1591015639000" analysisTimestamp="1591020530845" release="">
   <Project>
-    <Jar>/Users/kristevs/dev/works/java/sonar_test/target/classes/DocBuilder.class</Jar>
-    <Jar>/Users/kristevs/dev/works/java/sonar_test/target/classes/Hello.class</Jar>
-    <Jar>/Users/kristevs/dev/works/java/sonar_test/target/classes/StaticCodeExample.class</Jar>
+    <Jar>/Users/kristevs/dev/works/java/sonar_test/target/classes/hello/Hello.class</Jar>
     <AuxClasspathEntry>/Users/kristevs/dev/works/java/sonar_test/target/classes</AuxClasspathEntry>
     <AuxClasspathEntry>/Users/kristevs/dev/works/java/sonar_test/target/sonar/findbugs/annotations.jar</AuxClasspathEntry>
     <AuxClasspathEntry>/Users/kristevs/dev/works/java/sonar_test/target/sonar/findbugs/jsr305.jar</AuxClasspathEntry>
     <WrkDir>/Users/kristevs/dev/works/java/sonar_test/target/sonar</WrkDir>
   </Project>
-  <BugInstance type="IMC_IMMATURE_CLASS_PRINTSTACKTRACE" priority="2" rank="17" abbrev="IMC" category="STYLE" instanceHash="6e8d4ff3f97fd92b98b80f57cf1ecd61" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
-    <ShortMessage>Method prints the stack trace to the console</ShortMessage>
-    <LongMessage>Method DocBuilder.fun() prints the stack trace to the console</LongMessage>
-    <Class classname="DocBuilder" primary="true">
-      <SourceLine classname="DocBuilder" start="11" end="41" sourcefile="DocBuilder.java" sourcepath="DocBuilder.java">
-        <Message>At DocBuilder.java:[lines 11-41]</Message>
-      </SourceLine>
-      <Message>In class DocBuilder</Message>
-    </Class>
-    <Method classname="DocBuilder" name="fun" signature="()V" isStatic="true" primary="true">
-      <SourceLine classname="DocBuilder" start="17" end="41" startBytecode="0" endBytecode="304" sourcefile="DocBuilder.java" sourcepath="DocBuilder.java"/>
-      <Message>In method DocBuilder.fun()</Message>
-    </Method>
-    <SourceLine classname="DocBuilder" primary="true" start="39" end="39" startBytecode="119" endBytecode="119" sourcefile="DocBuilder.java" sourcepath="DocBuilder.java">
-      <Message>At DocBuilder.java:[line 39]</Message>
-    </SourceLine>
-  </BugInstance>
-  <BugInstance type="XXE_DOCUMENT" priority="2" rank="7" abbrev="SECXXEDOC" category="SECURITY" instanceHash="242d62c48ee6a4751551f5d9fd903d7c" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="611">
-    <ShortMessage>XML parsing vulnerable to XXE (DocumentBuilder)</ShortMessage>
-    <LongMessage>The use of DocumentBuilder.parse(...) (DocumentBuilder) is vulnerable to XML External Entity attacks</LongMessage>
-    <Class classname="DocBuilder" primary="true">
-      <SourceLine classname="DocBuilder" start="11" end="41" sourcefile="DocBuilder.java" sourcepath="DocBuilder.java">
-        <Message>At DocBuilder.java:[lines 11-41]</Message>
-      </SourceLine>
-      <Message>In class DocBuilder</Message>
-    </Class>
-    <Method classname="DocBuilder" name="fun" signature="()V" isStatic="true" primary="true">
-      <SourceLine classname="DocBuilder" start="17" end="41" startBytecode="0" endBytecode="304" sourcefile="DocBuilder.java" sourcepath="DocBuilder.java"/>
-      <Message>In method DocBuilder.fun()</Message>
-    </Method>
-    <SourceLine classname="DocBuilder" primary="true" start="26" end="26" startBytecode="32" endBytecode="32" sourcefile="DocBuilder.java" sourcepath="DocBuilder.java">
-      <Message>At DocBuilder.java:[line 26]</Message>
-    </SourceLine>
-    <String value="DocumentBuilder.parse(...)">
-      <Message>Value DocumentBuilder.parse(...)</Message>
-    </String>
-  </BugInstance>
-  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="1" rank="15" abbrev="DLS" category="STYLE" instanceHash="ecd91fe220e40761f88173a8f5c1a022" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
-    <ShortMessage>Dead store to local variable</ShortMessage>
-    <LongMessage>Dead store to random in Hello.main(String[])</LongMessage>
-    <Class classname="Hello" primary="true">
-      <SourceLine classname="Hello" start="17" end="84" sourcefile="Hello.java" sourcepath="Hello.java">
-        <Message>At Hello.java:[lines 17-84]</Message>
-      </SourceLine>
-      <Message>In class Hello</Message>
-    </Class>
-    <Method classname="Hello" name="main" signature="([Ljava/lang/String;)V" isStatic="true" primary="true">
-      <SourceLine classname="Hello" start="19" end="37" startBytecode="0" endBytecode="7" sourcefile="Hello.java" sourcepath="Hello.java"/>
-      <Message>In method Hello.main(String[])</Message>
-    </Method>
-    <LocalVariable name="random" register="2" pc="11" role="LOCAL_VARIABLE_NAMED">
-      <Message>Local variable named random</Message>
-    </LocalVariable>
-    <SourceLine classname="Hello" primary="true" start="20" end="20" startBytecode="10" endBytecode="10" sourcefile="Hello.java" sourcepath="Hello.java">
-      <Message>At Hello.java:[line 20]</Message>
-    </SourceLine>
-    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
-    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="random"/>
-    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
-  </BugInstance>
-  <BugInstance type="DMI_INVOKING_TOSTRING_ON_ARRAY" priority="2" rank="10" abbrev="USELESS_STRING" category="CORRECTNESS" instanceHash="a6ff58388dbe10da809c2ace33416527" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
-    <ShortMessage>Invocation of toString on an array</ShortMessage>
-    <LongMessage>Invocation of toString on hashValue in Hello.sha1()</LongMessage>
-    <Class classname="Hello" primary="true">
-      <SourceLine classname="Hello" start="17" end="84" sourcefile="Hello.java" sourcepath="Hello.java">
-        <Message>At Hello.java:[lines 17-84]</Message>
-      </SourceLine>
-      <Message>In class Hello</Message>
-    </Class>
-    <Method classname="Hello" name="sha1" signature="()V" isStatic="true" primary="true">
-      <SourceLine classname="Hello" start="75" end="84" startBytecode="0" endBytecode="115" sourcefile="Hello.java" sourcepath="Hello.java"/>
-      <Message>In method Hello.sha1()</Message>
-    </Method>
-    <LocalVariable name="hashValue" register="1" pc="24" role="LOCAL_VARIABLE_NAMED">
-      <Message>Local variable named hashValue</Message>
-    </LocalVariable>
-    <SourceLine classname="Hello" primary="true" start="80" end="80" startBytecode="24" endBytecode="24" sourcefile="Hello.java" sourcepath="Hello.java">
-      <Message>At Hello.java:[line 80]</Message>
-    </SourceLine>
-  </BugInstance>
-  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="42d40e671b62d4bc356b684be0b51626" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
-    <ShortMessage>Reliance on default encoding</ShortMessage>
-    <LongMessage>Found reliance on default encoding in Hello.sha1(): String.getBytes()</LongMessage>
-    <Class classname="Hello" primary="true">
-      <SourceLine classname="Hello" start="17" end="84" sourcefile="Hello.java" sourcepath="Hello.java">
-        <Message>At Hello.java:[lines 17-84]</Message>
-      </SourceLine>
-      <Message>In class Hello</Message>
-    </Class>
-    <Method classname="Hello" name="sha1" signature="()V" isStatic="true" primary="true">
-      <SourceLine classname="Hello" start="75" end="84" startBytecode="0" endBytecode="115" sourcefile="Hello.java" sourcepath="Hello.java"/>
-      <Message>In method Hello.sha1()</Message>
-    </Method>
-    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
-      <SourceLine classname="java.lang.String" start="958" end="958" startBytecode="0" endBytecode="37" sourcefile="String.java" sourcepath="java/lang/String.java"/>
-      <Message>Called method String.getBytes()</Message>
-    </Method>
-    <SourceLine classname="Hello" primary="true" start="76" end="76" startBytecode="9" endBytecode="9" sourcefile="Hello.java" sourcepath="Hello.java">
-      <Message>At Hello.java:[line 76]</Message>
-    </SourceLine>
-  </BugInstance>
-  <BugInstance type="MDM_STRING_BYTES_ENCODING" priority="2" rank="7" abbrev="MDM" category="CORRECTNESS" instanceHash="2f024d643024a8abe6c10eb51c811dc2" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
-    <ShortMessage>Method encodes String bytes without specifying the character encoding</ShortMessage>
-    <LongMessage>Method Hello.sha1() encodes String bytes without specifying the character encoding</LongMessage>
-    <Class classname="Hello" primary="true">
-      <SourceLine classname="Hello" start="17" end="84" sourcefile="Hello.java" sourcepath="Hello.java">
-        <Message>At Hello.java:[lines 17-84]</Message>
-      </SourceLine>
-      <Message>In class Hello</Message>
-    </Class>
-    <Method classname="Hello" name="sha1" signature="()V" isStatic="true" primary="true">
-      <SourceLine classname="Hello" start="75" end="84" startBytecode="0" endBytecode="115" sourcefile="Hello.java" sourcepath="Hello.java"/>
-      <Message>In method Hello.sha1()</Message>
-    </Method>
-    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
-      <SourceLine classname="java.lang.String" start="958" end="958" startBytecode="0" endBytecode="37" sourcefile="String.java" sourcepath="java/lang/String.java"/>
-      <Message>Called method String.getBytes()</Message>
-    </Method>
-    <SourceLine classname="Hello" primary="true" start="76" end="76" startBytecode="9" endBytecode="9" sourcefile="Hello.java" sourcepath="Hello.java">
-      <Message>At Hello.java:[line 76]</Message>
-    </SourceLine>
-  </BugInstance>
-  <BugInstance type="PREDICTABLE_RANDOM" priority="2" rank="7" abbrev="SECPR" category="SECURITY" instanceHash="f21884acfc63eb8fafaa8cc38a68616e" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="330">
-    <ShortMessage>Predictable pseudorandom number generator</ShortMessage>
-    <LongMessage>This random generator (java.util.Random) is predictable</LongMessage>
-    <Class classname="Hello" primary="true">
-      <SourceLine classname="Hello" start="17" end="84" sourcefile="Hello.java" sourcepath="Hello.java">
-        <Message>At Hello.java:[lines 17-84]</Message>
-      </SourceLine>
-      <Message>In class Hello</Message>
-    </Class>
-    <Method classname="Hello" name="main" signature="([Ljava/lang/String;)V" isStatic="true" primary="true">
-      <SourceLine classname="Hello" start="19" end="37" startBytecode="0" endBytecode="88" sourcefile="Hello.java" sourcepath="Hello.java"/>
-      <Message>In method Hello.main(String[])</Message>
-    </Method>
-    <SourceLine classname="Hello" primary="true" start="20" end="20" startBytecode="7" endBytecode="7" sourcefile="Hello.java" sourcepath="Hello.java">
-      <Message>At Hello.java:[line 20]</Message>
-    </SourceLine>
-    <String value="java.util.Random">
-      <Message>Value java.util.Random</Message>
-    </String>
-  </BugInstance>
-  <BugInstance type="WEAK_MESSAGE_DIGEST_SHA1" priority="2" rank="7" abbrev="SECSHA1" category="SECURITY" instanceHash="7549afe4aeba7b204233451301dea9fd" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="328">
+  <BugInstance type="WEAK_MESSAGE_DIGEST_SHA1" priority="2" rank="7" abbrev="SECSHA1" category="SECURITY" instanceHash="3121be16de7431e190abe69f86ffb85b" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="328">
     <ShortMessage>SHA-1 is a weak hash function</ShortMessage>
     <LongMessage>This API SHA1 (SHA-1) is not a recommended cryptographic hash function</LongMessage>
-    <Class classname="Hello" primary="true">
-      <SourceLine classname="Hello" start="17" end="84" sourcefile="Hello.java" sourcepath="Hello.java">
-        <Message>At Hello.java:[lines 17-84]</Message>
+    <Class classname="hello.Hello" primary="true">
+      <SourceLine classname="hello.Hello" start="5" end="21" sourcefile="Hello.java" sourcepath="hello/Hello.java">
+        <Message>At Hello.java:[lines 5-21]</Message>
       </SourceLine>
-      <Message>In class Hello</Message>
+      <Message>In class hello.Hello</Message>
     </Class>
-    <Method classname="Hello" name="sha1" signature="()V" isStatic="true" primary="true">
-      <SourceLine classname="Hello" start="75" end="84" startBytecode="0" endBytecode="115" sourcefile="Hello.java" sourcepath="Hello.java"/>
-      <Message>In method Hello.sha1()</Message>
+    <Method classname="hello.Hello" name="sha1" signature="()V" isStatic="true" primary="true">
+      <SourceLine classname="hello.Hello" start="13" end="21" startBytecode="0" endBytecode="139" sourcefile="Hello.java" sourcepath="hello/Hello.java"/>
+      <Message>In method hello.Hello.sha1()</Message>
     </Method>
-    <SourceLine classname="Hello" primary="true" start="75" end="75" startBytecode="2" endBytecode="2" sourcefile="Hello.java" sourcepath="Hello.java">
-      <Message>At Hello.java:[line 75]</Message>
+    <SourceLine classname="hello.Hello" primary="true" start="13" end="13" startBytecode="2" endBytecode="2" sourcefile="Hello.java" sourcepath="hello/Hello.java">
+      <Message>At Hello.java:[line 13]</Message>
     </SourceLine>
     <String value="SHA1">
       <Message>Value SHA1</Message>
     </String>
   </BugInstance>
-  <BugInstance type="FCBL_FIELD_COULD_BE_LOCAL" priority="2" rank="7" abbrev="FCBL" category="CORRECTNESS" instanceHash="e20703734c0144358ccf71bb2b60b83" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
-    <ShortMessage>Class defines fields that are used only as locals</ShortMessage>
-    <LongMessage>Class StaticCodeExample defines fields that are used only as locals</LongMessage>
-    <Class classname="StaticCodeExample" primary="true">
-      <SourceLine classname="StaticCodeExample" start="1" end="20" sourcefile="StaticCodeExample.java" sourcepath="StaticCodeExample.java">
-        <Message>At StaticCodeExample.java:[lines 1-20]</Message>
-      </SourceLine>
-      <Message>In class StaticCodeExample</Message>
-    </Class>
-    <Field classname="StaticCodeExample" name="abc" signature="I" isStatic="false" primary="true">
-      <SourceLine classname="StaticCodeExample" sourcefile="StaticCodeExample.java" sourcepath="StaticCodeExample.java">
-        <Message>In StaticCodeExample.java</Message>
-      </SourceLine>
-      <Message>Field StaticCodeExample.abc</Message>
-    </Field>
-    <SourceLine classname="StaticCodeExample" sourcefile="StaticCodeExample.java" sourcepath="StaticCodeExample.java" synthetic="true">
-      <Message>In StaticCodeExample.java</Message>
-    </SourceLine>
-  </BugInstance>
-  <BugInstance type="SACM_STATIC_ARRAY_CREATED_IN_METHOD" priority="2" rank="18" abbrev="SACM" category="PERFORMANCE" instanceHash="3c951b4b37864d0c09b03b8213e69b28" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
-    <ShortMessage>Method creates array using constants</ShortMessage>
-    <LongMessage>Method StaticCodeExample.test() creates array using constants</LongMessage>
-    <Class classname="StaticCodeExample" primary="true">
-      <SourceLine classname="StaticCodeExample" start="1" end="20" sourcefile="StaticCodeExample.java" sourcepath="StaticCodeExample.java">
-        <Message>At StaticCodeExample.java:[lines 1-20]</Message>
-      </SourceLine>
-      <Message>In class StaticCodeExample</Message>
-    </Class>
-    <Method classname="StaticCodeExample" name="test" signature="()V" isStatic="false" primary="true">
-      <SourceLine classname="StaticCodeExample" start="10" end="20" startBytecode="0" endBytecode="174" sourcefile="StaticCodeExample.java" sourcepath="StaticCodeExample.java"/>
-      <Message>In method StaticCodeExample.test()</Message>
-    </Method>
-    <SourceLine classname="StaticCodeExample" primary="true" start="10" end="10" startBytecode="29" endBytecode="29" sourcefile="StaticCodeExample.java" sourcepath="StaticCodeExample.java">
-      <Message>At StaticCodeExample.java:[line 10]</Message>
-    </SourceLine>
-  </BugInstance>
-  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" rank="18" abbrev="SBSC" category="PERFORMANCE" instanceHash="8c9d10bea222ce59b3887d096354ab7e" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
-    <ShortMessage>Method concatenates strings using + in a loop</ShortMessage>
-    <LongMessage>StaticCodeExample.test() concatenates strings using + in a loop</LongMessage>
-    <Class classname="StaticCodeExample" primary="true">
-      <SourceLine classname="StaticCodeExample" start="1" end="20" sourcefile="StaticCodeExample.java" sourcepath="StaticCodeExample.java">
-        <Message>At StaticCodeExample.java:[lines 1-20]</Message>
-      </SourceLine>
-      <Message>In class StaticCodeExample</Message>
-    </Class>
-    <Method classname="StaticCodeExample" name="test" signature="()V" isStatic="false" primary="true">
-      <SourceLine classname="StaticCodeExample" start="10" end="20" startBytecode="0" endBytecode="174" sourcefile="StaticCodeExample.java" sourcepath="StaticCodeExample.java"/>
-      <Message>In method StaticCodeExample.test()</Message>
-    </Method>
-    <SourceLine classname="StaticCodeExample" primary="true" start="15" end="15" startBytecode="41" endBytecode="41" sourcefile="StaticCodeExample.java" sourcepath="StaticCodeExample.java">
-      <Message>At StaticCodeExample.java:[line 15]</Message>
-    </SourceLine>
-  </BugInstance>
-  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" instanceHash="43ebd89ee4b085f1492eb7d8bee26147" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
-    <ShortMessage>Unused field</ShortMessage>
-    <LongMessage>Unused field: StaticCodeExample.abc</LongMessage>
-    <Class classname="StaticCodeExample" primary="true">
-      <SourceLine classname="StaticCodeExample" start="1" end="20" sourcefile="StaticCodeExample.java" sourcepath="StaticCodeExample.java">
-        <Message>At StaticCodeExample.java:[lines 1-20]</Message>
-      </SourceLine>
-      <Message>In class StaticCodeExample</Message>
-    </Class>
-    <Field classname="StaticCodeExample" name="abc" signature="I" isStatic="false" primary="true">
-      <SourceLine classname="StaticCodeExample" sourcefile="StaticCodeExample.java" sourcepath="StaticCodeExample.java">
-        <Message>In StaticCodeExample.java</Message>
-      </SourceLine>
-      <Message>Field StaticCodeExample.abc</Message>
-    </Field>
-    <SourceLine classname="StaticCodeExample" sourcefile="StaticCodeExample.java" sourcepath="StaticCodeExample.java" synthetic="true">
-      <Message>In StaticCodeExample.java</Message>
-    </SourceLine>
-  </BugInstance>
-  <BugCategory category="CORRECTNESS">
-    <Description>Correctness</Description>
-  </BugCategory>
-  <BugCategory category="PERFORMANCE">
-    <Description>Performance</Description>
-  </BugCategory>
-  <BugCategory category="STYLE">
-    <Description>Dodgy code</Description>
-  </BugCategory>
   <BugCategory category="SECURITY">
     <Description>Security</Description>
   </BugCategory>
-  <BugCategory category="I18N">
-    <Description>Internationalization</Description>
-  </BugCategory>
-  <BugPattern type="DLS_DEAD_LOCAL_STORE" abbrev="DLS" category="STYLE">
-    <ShortDescription>Dead store to local variable</ShortDescription>
-    <Details><![CDATA[
-
-<p>
-This instruction assigns a value to a local variable,
-but the value is not read or used in any subsequent instruction.
-Often, this indicates an error, because the value computed is never
-used.
-</p>
-<p>
-Note that Sun's javac compiler often generates dead stores for
-final local variables.  Because SpotBugs is a bytecode-based tool,
-there is no easy way to eliminate these false positives.
-</p>
-
-    ]]></Details>
-  </BugPattern>
-  <BugPattern type="IMC_IMMATURE_CLASS_PRINTSTACKTRACE" abbrev="IMC" category="STYLE">
-    <ShortDescription>Method prints the stack trace to the console</ShortDescription>
-    <Details><![CDATA[
-    		
-    		<p>This method prints a stack trace to the console. This is non configurable, and causes an
-    		application to look unprofessional. Switch to using loggers so that users can control what
-    		is logged and where.</p>
-    		
-    	]]></Details>
-  </BugPattern>
-  <BugPattern type="XXE_DOCUMENT" abbrev="SECXXEDOC" category="SECURITY" cweid="611">
-    <ShortDescription>XML parsing vulnerable to XXE (DocumentBuilder)</ShortDescription>
-    <Details><![CDATA[
-            
-<!--XXE_GENERIC_START-->
-<h3>Attack</h3>
-<p>XML External Entity (XXE) attacks can occur when an XML parser supports XML entities while processing XML received
-from an untrusted source.</p>
-<p><b>Risk 1: Expose local file content (XXE: <u>X</u>ML E<u>x</u>ternal <u>E</u>ntity)</b></p>
-<p>
-<pre>
-&lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&gt;
-&lt;!DOCTYPE foo [
-   &lt;!ENTITY xxe SYSTEM &quot;file:///etc/passwd&quot; &gt; ]&gt;
-&lt;foo&gt;&amp;xxe;&lt;/foo&gt;</pre>
-</p>
-<b>Risk 2: Denial of service (XEE: <u>X</u>ML <u>E</u>ntity <u>E</u>xpansion)</b>
-<p>
-<pre>
-&lt;?xml version=&quot;1.0&quot;?&gt;
-&lt;!DOCTYPE lolz [
- &lt;!ENTITY lol &quot;lol&quot;&gt;
- &lt;!ELEMENT lolz (#PCDATA)&gt;
- &lt;!ENTITY lol1 &quot;&amp;lol;&amp;lol;&amp;lol;&amp;lol;&amp;lol;&amp;lol;&amp;lol;&amp;lol;&amp;lol;&amp;lol;&quot;&gt;
- &lt;!ENTITY lol2 &quot;&amp;lol1;&amp;lol1;&amp;lol1;&amp;lol1;&amp;lol1;&amp;lol1;&amp;lol1;&amp;lol1;&amp;lol1;&amp;lol1;&quot;&gt;
- &lt;!ENTITY lol3 &quot;&amp;lol2;&amp;lol2;&amp;lol2;&amp;lol2;&amp;lol2;&amp;lol2;&amp;lol2;&amp;lol2;&amp;lol2;&amp;lol2;&quot;&gt;
-[...]
- &lt;!ENTITY lol9 &quot;&amp;lol8;&amp;lol8;&amp;lol8;&amp;lol8;&amp;lol8;&amp;lol8;&amp;lol8;&amp;lol8;&amp;lol8;&amp;lol8;&quot;&gt;
-]&gt;
-&lt;lolz&gt;&amp;lol9;&lt;/lolz&gt;</pre>
-</p>
-
-<h3>Solution</h3>
-<p>
-In order to avoid exposing dangerous feature of the XML parser, you can do the following change to the code.
-</p>
-<!--XXE_GENERIC_END-->
-
-<p><b>Vulnerable Code:</b></p>
-<p>
-<pre>
-DocumentBuilder db = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-
-Document doc = db.parse(input);</pre>
-</p>
-<br/>
-<p>
-The following snippets show two available solutions. You can set one feature or both.
-</p>
-
-<p><b>Solution using "Secure processing" mode:</b></p>
-<p>
-This setting will protect you against Denial of Service attack and remote file access.
-<pre>
-DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-dbf.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);
-DocumentBuilder db = dbf.newDocumentBuilder();
-
-Document doc = db.parse(input);</pre>
-</p>
-
-<p><b>Solution disabling DTD:</b></p>
-<p>
-By disabling DTD, almost all XXE attacks will be prevented.
-<pre>
-DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-dbf.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
-DocumentBuilder db = dbf.newDocumentBuilder();
-
-Document doc = db.parse(input);</pre>
-</p>
-<br/>
-<p>
-<b>References</b><br/>
-<!--XXE_GENERIC_START-->
-<a href="https://cwe.mitre.org/data/definitions/611.html">CWE-611: Improper Restriction of XML External Entity Reference ('XXE')</a><br/>
-<a href="https://www.securecoding.cert.org/confluence/pages/viewpage.action?pageId=61702260">CERT: IDS10-J. Prevent XML external entity attacks</a><br/>
-<a href="https://www.owasp.org/index.php/XML_External_Entity_%28XXE%29_Processing">OWASP.org: XML External Entity (XXE) Processing</a><br/>
-<a href="https://www.ws-attacks.org/index.php/XML_Entity_Expansion">WS-Attacks.org: XML Entity Expansion</a><br/>
-<a href="https://www.ws-attacks.org/index.php/XML_External_Entity_DOS">WS-Attacks.org: XML External Entity DOS</a><br/>
-<a href="https://www.ws-attacks.org/index.php/XML_Entity_Reference_Attack">WS-Attacks.org: XML Entity Reference Attack</a><br/>
-<a href="https://blog.h3xstream.com/2014/06/identifying-xml-external-entity.html">Identifying XML External Entity vulnerability (XXE)</a><br/>
-<!--XXE_GENERIC_END-->
-<a href="http://xerces.apache.org/xerces2-j/features.html">Xerces2 complete features list</a>
-</p>
-
-        ]]></Details>
-  </BugPattern>
-  <BugPattern type="UUF_UNUSED_FIELD" abbrev="UuF" category="PERFORMANCE">
-    <ShortDescription>Unused field</ShortDescription>
-    <Details><![CDATA[
-
-  <p> This field is never used.&nbsp; Consider removing it from the class.</p>
-
-    ]]></Details>
-  </BugPattern>
-  <BugPattern type="FCBL_FIELD_COULD_BE_LOCAL" abbrev="FCBL" category="CORRECTNESS">
-    <ShortDescription>Class defines fields that are used only as locals</ShortDescription>
-    <Details><![CDATA[
-			
-			<p>This class defines fields that are used in a local only fashion,
-			specifically private fields or protected fields in final classes that are accessed
-			first in each method with a store vs. a load. This field could be replaced by one
-			or more local variables.</p>
-			
-		]]></Details>
-  </BugPattern>
-  <BugPattern type="SBSC_USE_STRINGBUFFER_CONCATENATION" abbrev="SBSC" category="PERFORMANCE">
-    <ShortDescription>Method concatenates strings using + in a loop</ShortDescription>
-    <Details><![CDATA[
-
-<p> The method seems to be building a String using concatenation in a loop.
-In each iteration, the String is converted to a StringBuffer/StringBuilder,
-   appended to, and converted back to a String.
-   This can lead to a cost quadratic in the number of iterations,
-   as the growing string is recopied in each iteration. </p>
-
-<p>Better performance can be obtained by using
-a StringBuffer (or StringBuilder in Java 1.5) explicitly.</p>
-
-<p> For example:</p>
-<pre><code>// This is bad
-String s = "";
-for (int i = 0; i &lt; field.length; ++i) {
-    s = s + field[i];
-}
-
-// This is better
-StringBuffer buf = new StringBuffer();
-for (int i = 0; i &lt; field.length; ++i) {
-    buf.append(field[i]);
-}
-String s = buf.toString();
-</code></pre>
-
-    ]]></Details>
-  </BugPattern>
   <BugPattern type="WEAK_MESSAGE_DIGEST_SHA1" abbrev="SECSHA1" category="SECURITY" cweid="328">
     <ShortDescription>SHA-1 is a weak hash function</ShortDescription>
     <Details><![CDATA[
@@ -488,156 +95,30 @@ uses. <b>PBKDF2</b> should be used to hash password for example.</p>
 
         ]]></Details>
   </BugPattern>
-  <BugPattern type="DM_DEFAULT_ENCODING" abbrev="Dm" category="I18N">
-    <ShortDescription>Reliance on default encoding</ShortDescription>
-    <Details><![CDATA[
-
-<p> Found a call to a method which will perform a byte to String (or String to byte) conversion, and will assume that the default platform encoding is suitable. This will cause the application behaviour to vary between platforms. Use an alternative API and specify a charset name or Charset object explicitly.  </p>
-
-      ]]></Details>
-  </BugPattern>
-  <BugPattern type="PREDICTABLE_RANDOM" abbrev="SECPR" category="SECURITY" cweid="330">
-    <ShortDescription>Predictable pseudorandom number generator</ShortDescription>
-    <Details><![CDATA[
-            
-<p>The use of a predictable random value can lead to vulnerabilities when used in certain security critical contexts. For example, when the value is used as:</p>
-<ul>
-<li>a CSRF token: a predictable token can lead to a CSRF attack as an attacker will know the value of the token</li>
-<li>a password reset token (sent by email): a predictable password token can lead to an account takeover, since an attacker will guess the URL of the "change password" form</li>
-<li>any other secret value</li>
-</ul>
-<p>
-A quick fix could be to replace the use of <code>java.util.Random</code> with something stronger, such as <code>java.security.SecureRandom</code>.
-</p>
-<p>
-<b>Vulnerable Code:</b><br/>
-<pre>String generateSecretToken() {
-    Random r = new Random();
-    return Long.toHexString(r.nextLong());
-}</pre>
-</p>
-<p>
-<b>Solution:</b>
-<pre>import org.apache.commons.codec.binary.Hex;
-
-String generateSecretToken() {
-    SecureRandom secRandom = new SecureRandom();
-
-    byte[] result = new byte[32];
-    secRandom.nextBytes(result);
-    return Hex.encodeHexString(result);
-}</pre>
-</p>
-<br/>
-<p>
-<b>References</b><br/>
-<a href="https://jazzy.id.au/2010/09/20/cracking_random_number_generators_part_1.html">Cracking Random Number Generators - Part 1 (https://jazzy.id.au)</a><br/>
-<a href="https://www.securecoding.cert.org/confluence/display/java/MSC02-J.+Generate+strong+random+numbers">CERT: MSC02-J. Generate strong random numbers</a><br/>
-<a href="https://cwe.mitre.org/data/definitions/330.html">CWE-330: Use of Insufficiently Random Values</a><br/>
-<a href="https://blog.h3xstream.com/2014/12/predicting-struts-csrf-token-cve-2014.html">Predicting Struts CSRF Token (Example of real-life vulnerability and exploitation)</a>
-</p>
-
-        ]]></Details>
-  </BugPattern>
-  <BugPattern type="SACM_STATIC_ARRAY_CREATED_IN_METHOD" abbrev="SACM" category="PERFORMANCE">
-    <ShortDescription>Method creates array using constants</ShortDescription>
-    <Details><![CDATA[
-			
-			<p>This method creates an array initialized by constants. Each time this method is called
-			this array will be recreated. It would be more performant to define the array as a
-			static field of the class instead.</p>
-			
-		]]></Details>
-  </BugPattern>
-  <BugPattern type="MDM_STRING_BYTES_ENCODING" abbrev="MDM" category="CORRECTNESS">
-    <ShortDescription>Method encodes String bytes without specifying the character encoding</ShortDescription>
-    <Details><![CDATA[
-			
-			<p>The behavior of the <code>String(byte[] bytes)</code> and <code>String.getBytes()</code> is undefined if the string cannot be encoded in the platform's default charset. Instead, use the <code>String(byte[] bytes, String encoding)</code> or <code>String.getBytes(String encoding)</code> constructor which accepts the string's encoding as an argument. Be sure to specify the encoding used for the user's locale.</p>
-
-			<p>As per the Java specifications, "UTF-8", "US-ASCII", "UTF-16" and "ISO-8859-1" will all be valid <a href = "http://docs.oracle.com/javase/7/docs/api/java/nio/charset/Charset.html#standard">encoding charsets</a>.  If you aren't sure, try "UTF-8".</p>
-
-			<p><b>New in Java 1.7</b>, you can specify an encoding from <code>StandardCharsets</code>, like <code>StandardCharsets.UTF_8</code>.  These are generally preferrable because you don't have to deal with <code>UnsupportedEncodingException</code>.</p>
-			
-		]]></Details>
-  </BugPattern>
-  <BugPattern type="DMI_INVOKING_TOSTRING_ON_ARRAY" abbrev="USELESS_STRING" category="CORRECTNESS">
-    <ShortDescription>Invocation of toString on an array</ShortDescription>
-    <Details><![CDATA[
-
-<p>
-The code invokes toString on an array, which will generate a fairly useless result
-such as [C@16f0472. Consider using Arrays.toString to convert the array into a readable
-String that gives the contents of the array. See Programming Puzzlers, chapter 3, puzzle 12.
-</p>
-
-    ]]></Details>
-  </BugPattern>
-  <BugCode abbrev="SECXXEDOC">
-    <Description>XXE Vulnerability using DocumentBuilder</Description>
-  </BugCode>
-  <BugCode abbrev="SECPR">
-    <Description>Predictable Pseudo Random Generator</Description>
-  </BugCode>
-  <BugCode abbrev="MDM">
-    <Description>More Dumb Methods</Description>
-  </BugCode>
-  <BugCode abbrev="FCBL">
-    <Description>Field Could Be Local</Description>
-  </BugCode>
-  <BugCode abbrev="UuF">
-    <Description>Unused field</Description>
-  </BugCode>
-  <BugCode abbrev="Dm">
-    <Description>Dubious method used</Description>
-  </BugCode>
-  <BugCode abbrev="SBSC">
-    <Description>String concatenation in loop using + operator</Description>
-  </BugCode>
-  <BugCode abbrev="DLS" cweid="563">
-    <Description>Dead local store</Description>
-  </BugCode>
-  <BugCode abbrev="USELESS_STRING">
-    <Description>Useless/non-informative string generated</Description>
-  </BugCode>
   <BugCode abbrev="SECSHA1">
     <Description>SHA-1 is a weak hash function</Description>
   </BugCode>
-  <BugCode abbrev="IMC">
-    <Description>Immature Class</Description>
-  </BugCode>
-  <BugCode abbrev="SACM">
-    <Description>Static Array Created in Method</Description>
-  </BugCode>
   <Errors errors="0" missingClasses="0"></Errors>
-  <FindBugsSummary timestamp="Thu, 30 Apr 2020 10:15:06 +0200" total_classes="3" referenced_classes="26" total_bugs="12" total_size="46" num_packages="1" java_version="1.8.0_181" vm_version="25.181-b13" cpu_seconds="7.39" clock_seconds="1.67" peak_mbytes="431.91" alloc_mbytes="3641.00" gc_seconds="0.01" priority_2="10" priority_1="2">
-    <FileStats path="DocBuilder.java" bugCount="2" size="17" bugHash="27d12099d3908b69ad32c2413a34d0c8"/>
-    <FileStats path="Hello.java" bugCount="6" size="16" bugHash="ac0365d7afb07dc161d8ae57359599f1"/>
-    <FileStats path="StaticCodeExample.java" bugCount="4" size="13" bugHash="e80656290864b6e81eda93b6965e9de5"/>
-    <PackageStats package="" total_bugs="12" total_types="3" total_size="46" priority_2="10" priority_1="2">
-      <ClassStats class="DocBuilder" sourceFile="DocBuilder.java" interface="false" size="17" bugs="2" priority_2="2"/>
-      <ClassStats class="Hello" sourceFile="Hello.java" interface="false" size="16" bugs="6" priority_2="4" priority_1="2"/>
-      <ClassStats class="StaticCodeExample" sourceFile="StaticCodeExample.java" interface="false" size="13" bugs="4" priority_2="4"/>
+  <FindBugsSummary timestamp="Mon, 1 Jun 2020 14:47:19 +0200" total_classes="1" referenced_classes="14" total_bugs="1" total_size="15" num_packages="1" java_version="1.8.0_181" vm_version="25.181-b13" cpu_seconds="5.40" clock_seconds="1.26" peak_mbytes="322.68" alloc_mbytes="3641.00" gc_seconds="0.01" priority_2="1">
+    <FileStats path="hello/Hello.java" bugCount="1" size="15" bugHash="6365228ea45f29242f544f57d4570a54"/>
+    <PackageStats package="hello" total_bugs="1" total_types="1" total_size="15" priority_2="1">
+      <ClassStats class="hello.Hello" sourceFile="Hello.java" interface="false" size="15" bugs="1" priority_2="1"/>
     </PackageStats>
     <FindBugsProfile>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="153" invocations="400" avgMicrosecondsPerInvocation="382" maxMicrosecondsPerInvocation="15979" standardDeviationMicrosecondsPerInvocation="1000"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="59" invocations="420" avgMicrosecondsPerInvocation="141" maxMicrosecondsPerInvocation="459" standardDeviationMicrosecondsPerInvocation="57"/>
-      <ClassProfile name="com.mebigfatguy.fbcontrib.collect.CollectNullableMethodStatus" totalMilliseconds="37" invocations="26" avgMicrosecondsPerInvocation="1437" maxMicrosecondsPerInvocation="18044" standardDeviationMicrosecondsPerInvocation="3704"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="36" invocations="26" avgMicrosecondsPerInvocation="1419" maxMicrosecondsPerInvocation="9407" standardDeviationMicrosecondsPerInvocation="2170"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="36" invocations="7" avgMicrosecondsPerInvocation="5246" maxMicrosecondsPerInvocation="34818" standardDeviationMicrosecondsPerInvocation="12073"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="35" invocations="134" avgMicrosecondsPerInvocation="267" maxMicrosecondsPerInvocation="18635" standardDeviationMicrosecondsPerInvocation="1625"/>
-      <ClassProfile name="com.mebigfatguy.fbcontrib.collect.CollectStatistics" totalMilliseconds="35" invocations="26" avgMicrosecondsPerInvocation="1355" maxMicrosecondsPerInvocation="10261" standardDeviationMicrosecondsPerInvocation="2300"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="26" invocations="26" avgMicrosecondsPerInvocation="1023" maxMicrosecondsPerInvocation="5279" standardDeviationMicrosecondsPerInvocation="1284"/>
-      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="25" invocations="77" avgMicrosecondsPerInvocation="331" maxMicrosecondsPerInvocation="2735" standardDeviationMicrosecondsPerInvocation="429"/>
-      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="23" invocations="367" avgMicrosecondsPerInvocation="64" maxMicrosecondsPerInvocation="1264" standardDeviationMicrosecondsPerInvocation="123"/>
-      <ClassProfile name="com.h3xstream.findsecbugs.taintanalysis.TaintDataflowEngine" totalMilliseconds="18" invocations="7" avgMicrosecondsPerInvocation="2583" maxMicrosecondsPerInvocation="9981" standardDeviationMicrosecondsPerInvocation="3224"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="17" invocations="26" avgMicrosecondsPerInvocation="680" maxMicrosecondsPerInvocation="8599" standardDeviationMicrosecondsPerInvocation="1718"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="17" invocations="7" avgMicrosecondsPerInvocation="2433" maxMicrosecondsPerInvocation="10295" standardDeviationMicrosecondsPerInvocation="3380"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="16" invocations="7" avgMicrosecondsPerInvocation="2367" maxMicrosecondsPerInvocation="8729" standardDeviationMicrosecondsPerInvocation="2900"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="16" invocations="7" avgMicrosecondsPerInvocation="2330" maxMicrosecondsPerInvocation="11793" standardDeviationMicrosecondsPerInvocation="3895"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="15" invocations="26" avgMicrosecondsPerInvocation="592" maxMicrosecondsPerInvocation="6900" standardDeviationMicrosecondsPerInvocation="1321"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="15" invocations="7" avgMicrosecondsPerInvocation="2165" maxMicrosecondsPerInvocation="6773" standardDeviationMicrosecondsPerInvocation="2308"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="14" invocations="26" avgMicrosecondsPerInvocation="568" maxMicrosecondsPerInvocation="9302" standardDeviationMicrosecondsPerInvocation="1778"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="165" invocations="339" avgMicrosecondsPerInvocation="489" maxMicrosecondsPerInvocation="19418" standardDeviationMicrosecondsPerInvocation="1501"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="85" invocations="340" avgMicrosecondsPerInvocation="251" maxMicrosecondsPerInvocation="2394" standardDeviationMicrosecondsPerInvocation="201"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="39" invocations="14" avgMicrosecondsPerInvocation="2816" maxMicrosecondsPerInvocation="9116" standardDeviationMicrosecondsPerInvocation="2841"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="35" invocations="3" avgMicrosecondsPerInvocation="11924" maxMicrosecondsPerInvocation="34894" standardDeviationMicrosecondsPerInvocation="16243"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="27" invocations="307" avgMicrosecondsPerInvocation="90" maxMicrosecondsPerInvocation="4962" standardDeviationMicrosecondsPerInvocation="311"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="27" invocations="62" avgMicrosecondsPerInvocation="446" maxMicrosecondsPerInvocation="3201" standardDeviationMicrosecondsPerInvocation="565"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="26" invocations="40" avgMicrosecondsPerInvocation="670" maxMicrosecondsPerInvocation="16986" standardDeviationMicrosecondsPerInvocation="2668"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="22" invocations="14" avgMicrosecondsPerInvocation="1615" maxMicrosecondsPerInvocation="6921" standardDeviationMicrosecondsPerInvocation="1811"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="17" invocations="14" avgMicrosecondsPerInvocation="1217" maxMicrosecondsPerInvocation="4881" standardDeviationMicrosecondsPerInvocation="1375"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="16" invocations="14" avgMicrosecondsPerInvocation="1202" maxMicrosecondsPerInvocation="7781" standardDeviationMicrosecondsPerInvocation="2024"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="15" invocations="14" avgMicrosecondsPerInvocation="1102" maxMicrosecondsPerInvocation="5736" standardDeviationMicrosecondsPerInvocation="1603"/>
+      <ClassProfile name="com.h3xstream.findsecbugs.taintanalysis.TaintDataflowEngine" totalMilliseconds="15" invocations="3" avgMicrosecondsPerInvocation="5065" maxMicrosecondsPerInvocation="13461" standardDeviationMicrosecondsPerInvocation="5960"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="14" invocations="3" avgMicrosecondsPerInvocation="4828" maxMicrosecondsPerInvocation="12537" standardDeviationMicrosecondsPerInvocation="5480"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="13" invocations="3" avgMicrosecondsPerInvocation="4630" maxMicrosecondsPerInvocation="11689" standardDeviationMicrosecondsPerInvocation="5045"/>
     </FindBugsProfile>
   </FindBugsSummary>
   <ClassFeatures></ClassFeatures>

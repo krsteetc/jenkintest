@@ -1,3 +1,5 @@
+package hello;
+
 import java.security.MessageDigest;
 
 public class Hello {
@@ -6,9 +8,7 @@ public class Hello {
         sha1();
     }
 
-
     public static void sha1() {
-
         try {
             MessageDigest sha1Digest = MessageDigest.getInstance("SHA1");
             sha1Digest.update("pass".getBytes());
@@ -16,7 +16,11 @@ public class Hello {
 
             System.out.println(hashValue);
         } catch (Exception e) {
-
+            System.out.println(e.getLocalizedMessage());
         }
+    }
+
+    public static void rand(){
+        Random random = new Random();
     }
 }

@@ -1,0 +1,230 @@
+{
+  "default": {
+    "assistance_24h_number": {
+      "en": {
+        "action": "+41 58 958 83 83"
+      },
+      "fr": {
+        "action": "+41 58 958 83 83"
+      },
+      "de": {
+        "action": "+41 58 958 83 83"
+      },
+      "it": {
+        "action": "+41 58 958 83 83"
+      }
+    },
+    "customer_care_number": {
+      "en": {
+        "action": "+41 58 958 84 00"
+      },
+      "fr": {
+        "action": "+41 58 958 84 00"
+      },
+      "de": {
+        "action": "+41 58 958 84 00"
+      },
+      "it": {
+        "action": "+41 58 958 84 00"
+      }
+    },
+    "privacyPolicy": {
+      "en": {
+        "action": "https://www.viseca.ch/en/data-protection/one"
+      },
+      "fr": {
+        "action": "https://www.viseca.ch/fr/protection-des-donnees/one"
+      },
+      "de": {
+        "action": "https://www.viseca.ch/de/datenschutz/one"
+      },
+      "it": {
+        "action": "https://www.viseca.ch/it/protezione-dei-dati/one"
+      }
+    },
+    "support_contact_email": {
+      "en": {
+        "action": "info@one-digitalservice.ch"
+      },
+      "fr": {
+        "action": "info@one-digitalservice.ch"
+      },
+      "de": {
+        "action": "info@one-digitalservice.ch"
+      },
+      "it": {
+        "action": "info@one-digitalservice.ch"
+      }
+    },
+    "support_contact_form_website": {
+      "en": {
+        "action": "https://www.viseca.ch/en/customer-service/contact"
+      },
+      "fr": {
+        "action": "https://www.viseca.ch/fr/service-clientele/contact"
+      },
+      "de": {
+        "action": "https://www.viseca.ch/de/kundendienst/kontakt"
+      },
+      "it": {
+        "action": "https://www.viseca.ch/it/servizio-clienti/contatto"
+      }
+    },
+    "support_faq_website": {
+      "en": {
+        "action": "https://www.one-digitalservice.ch/public/en/support"
+      },
+      "fr": {
+        "action": "https://www.one-digitalservice.ch/public/fr/assistance"
+      },
+      "de": {
+        "action": "https://www.one-digitalservice.ch/public/de/support"
+      },
+      "it": {
+        "action": "https://www.one-digitalservice.ch/public/it/supporto"
+      }
+    },
+    "support_website": {
+      "en": {
+        "action": "https://www.one-digitalservice.ch"
+      },
+      "fr": {
+        "action": "https://www.one-digitalservice.ch"
+      },
+      "de": {
+        "action": "https://www.one-digitalservice.ch"
+      },
+      "it": {
+        "action": "https://www.one-digitalservice.ch"
+      }
+    },
+    "termsAndCondition": {
+      "en": {
+        "action": "https://www.viseca.ch/en/terms/one"
+      },
+      "fr": {
+        "action": "https://www.viseca.ch/fr/conditions-generales/one"
+      },
+      "de": {
+        "action": "https://www.viseca.ch/de/agb/one"
+      },
+      "it": {
+        "action": "https://www.viseca.ch/it/disposizioni-legali/one"
+      }
+    }
+  },
+  "5354450KA5GP3812": {
+    "assistance_24h_number": {
+      "en": {
+        "action": "+41 31 952 20 50"
+      },
+      "fr": {
+        "action": "+41 31 952 20 50"
+      },
+      "de": {
+        "action": "+41 31 952 20 50"
+      },
+      "it": {
+        "action": "+41 31 952 20 50"
+      }
+    },
+    "customer_care_number": {
+      "en": {
+        "action": "+41 31 952 20 50"
+      },
+      "fr": {
+        "action": "+41 31 952 20 50"
+      },
+      "de": {
+        "action": "+41 31 952 20 50"
+      },
+      "it": {
+        "action": "+41 31 952 20 50"
+      }
+    },
+    "privacyPolicy": {
+      "en": {
+        "action": "https://www.valiant.ch/Datenschutz"
+      },
+      "fr": {
+        "action": "https://www.valiant.ch/fr/informations-juridiques/d%C3%A9claration-de-confidentialit%C3%A9"
+      },
+      "de": {
+        "action": "https://www.valiant.ch/Datenschutz"
+      },
+      "it": {
+        "action": "https://www.valiant.ch/Datenschutz"
+      }
+    },
+    "support_contact_email": {
+      "en": {
+        "action": "info@valiant.ch"
+      },
+      "fr": {
+        "action": "info@valiant.ch"
+      },
+      "de": {
+        "action": "info@valiant.ch"
+      },
+      "it": {
+        "action": "info@valiant.ch"
+      }
+    },
+    "support_contact_form_website": {
+      "en": {
+        "action": "https://www.valiant.ch/de/kontakt/allgemeine-anfrage"
+      },
+      "fr": {
+        "action": "https://www.valiant.ch/fr/contact/demande-generale"
+      },
+      "de": {
+        "action": "https://www.valiant.ch/de/kontakt/allgemeine-anfrage"
+      },
+      "it": {
+        "action": "https://www.valiant.ch/de/kontakt/allgemeine-anfrage"
+      }
+    },
+    "support_faq_website": {
+      "en": {
+        "action": "https://www.one-digitalservice.ch/public/en/support"
+      },
+      "fr": {
+        "action": "https://www.one-digitalservice.ch/public/fr/assistance"
+      },
+      "de": {
+        "action": "https://www.one-digitalservice.ch/public/de/support"
+      },
+      "it": {
+        "action": "https://www.one-digitalservice.ch/public/it/supporto"
+      }
+    },
+    "support_website": {
+      "en": {
+        "action": "https://www.valiant.ch/debitmastercard"
+      },
+      "fr": {
+        "action": "https://www.valiant.ch/debitmastercard"
+      },
+      "de": {
+        "action": "https://www.valiant.ch/debitmastercard"
+      },
+      "it": {
+        "action": "https://www.valiant.ch/debitmastercard"
+      }
+    },
+    "termsAndCondition": {
+      "en": {
+        "action": "https://www.valiant.ch/rechtliche-hinweise"
+      },
+      "fr": {
+        "action": "https://www.valiant.ch/informations-juridiques"
+      },
+      "de": {
+        "action": "https://www.valiant.ch/rechtliche-hinweise"
+      },
+      "it": {
+        "action": "https://www.valiant.ch/rechtliche-hinweise"
+      }
+    }
+  }
+}
