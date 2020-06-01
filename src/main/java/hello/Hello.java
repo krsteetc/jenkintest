@@ -2,6 +2,7 @@ package hello;
 
 import java.security.MessageDigest;
 import java.util.Random;
+import javax.crypto.Cipher;
 
 public class Hello {
 
@@ -23,6 +24,7 @@ public class Hello {
 
     public static void rand() {
         Random random = new Random();
+        Cipher c0 = Cipher.getInstance("AES"); // Noncompliant: by default ECB mode is chosen
     }
 
     public static void injection1() {
