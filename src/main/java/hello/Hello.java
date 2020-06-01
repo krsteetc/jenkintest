@@ -24,7 +24,11 @@ public class Hello {
 
     public static void rand() {
         Random random = new Random();
-        Cipher c0 = Cipher.getInstance("AES"); // Noncompliant: by default ECB mode is chosen
+        try {
+            Cipher c0 = Cipher.getInstance("AES"); // Noncompliant: by default ECB mode is chosen
+        }catch (Exception e){
+
+        }
     }
 
     public static void injection1() {
