@@ -21,7 +21,17 @@ public class Hello {
         }
     }
 
-    public static void rand(){
+    public static void rand() {
         Random random = new Random();
+    }
+
+    public static void injection1() {
+        try {
+            String className = System.getProperty("messageClassName");
+            Class clazz = Class.forName(className);  // Noncompliant
+            System.out.println(clazz.getConstructors());
+        } catch (Exception e) {
+
+        }
     }
 }
