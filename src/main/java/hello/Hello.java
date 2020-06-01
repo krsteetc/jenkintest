@@ -1,6 +1,7 @@
 package hello;
 
 import java.security.MessageDigest;
+import java.util.Random;
 
 public class Hello {
 
