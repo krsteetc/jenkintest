@@ -17,8 +17,11 @@ public class Hello {
             byte[] hashValue = sha1Digest.digest();
 
             System.out.println(hashValue);
+
+            rand();
         } catch (Exception e) {
             System.out.println(e.getLocalizedMessage());
+            e.printStackTrace();
         }
     }
 
