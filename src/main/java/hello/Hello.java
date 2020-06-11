@@ -26,12 +26,25 @@ public class Hello {
     }
 
     public static void rand() {
+        String password = "password";
         Random random = new Random();
         try {
             Cipher c0 = Cipher.getInstance("AES"); // Noncompliant: by default ECB mode is chosen
-        }catch (Exception e){
+        } catch (Exception e) {
 
         }
+        if (shouldLogin(password)) {
+            System.out.println("log in");
+        }
+    }
+
+    boolean
+
+    static shouldLogin(String pass) {
+        if (pass.legnth() > 10) {
+            return true;
+        }
+        return false;
     }
 
     public static void injection1() {
