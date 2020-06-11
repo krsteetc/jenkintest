@@ -39,7 +39,7 @@ public class Hello {
     }
 
     static boolean shouldLogin(String pass) {
-        if (pass.legnth() > 10) {
+        if (pass.length() > 10) {
             return true;
         }
         return false;
