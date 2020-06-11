@@ -38,7 +38,7 @@ public class Hello {
         }
     }
 
-    static shouldLogin(String pass) {
+    static boolean shouldLogin(String pass) {
         if (pass.legnth() > 10) {
             return true;
         }
